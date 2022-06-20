@@ -2,7 +2,7 @@ const express = require('express');
 const Model = require('../models/user');
 const router = express.Router();
 
-// Post Method
+// Add User Data
 router.post('/add', async (req, res) => {
   const { phoneNumber, name, email, dob, gender } = req.body;
 
