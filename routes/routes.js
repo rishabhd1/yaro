@@ -5,12 +5,12 @@ const router = express.Router();
 // Post Method
 router.post('/add', async (req, res) => {
   const { phoneNumber, name, email, dob, gender } = req.body;
-  const dateOfBirth = new Date(dob.split('-').reverse());
+
   const data = new Model({
     phoneNumber,
     name,
     email,
-    dob: dateOfBirth,
+    dob,
     gender,
   });
 
